@@ -1,1 +1,17 @@
 <h1> Dev new</h1>
+
+<%= form_for @dev do |f| %>
+<%= f.label :name, "Dev Name: " %>
+<%= f.text_field :name %>
+<%= f.label :experience, "Years of experience: " %>
+<%= f.number_field :experience, min: 0, step: 1 %>
+<%= f.label :workplace, "Workplace: "%>
+<%= f.text_field :workplace %><br><br>
+<%=f.label :project_id, "Project selection:"%>
+<%= f.collection_check_boxes(:project_ids, Project.all, :id, :name) %>
+
+<%= f.submit %>
+
+
+
+<%end %>

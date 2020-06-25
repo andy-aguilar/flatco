@@ -1,4 +1,12 @@
 <h1><%= @dev.name %></h1>
 <label> Work place: <%= @dev.workplace %></label><br>
 <label> Years of experience: <%= @dev.experience %></label><br>
+<label> Projects: </label>
+<% if @dev.projects  %>
+<ul>
+<% @dev.projects.each do |project| %>
+  <li><%= link_to project.name, project_path(project) %></li> 
+<%end%>
+</ul>
+<%end%>
 <%= link_to "List of devs", devs_path %>

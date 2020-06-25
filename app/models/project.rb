@@ -1,10 +1,6 @@
 class Project < ApplicationRecord
-    has_many :devprojects
-    has_many :devs, through: :devprojects
+    has_many :dev_projects
+    has_many :devs, through: :dev_projects
 
-    def self.name
-        self.all.map do |project|
-            project.name
-        end
-    end
+   
 end

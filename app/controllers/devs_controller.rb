@@ -13,6 +13,12 @@ class DevsController < ApplicationController
     end
   
     def create
-        @dev = Dev.
+         @dev = Dev.create(dev_params)
+         redirect_to dev_path(@dev)
+    end
+
+    private
+    def dev_params
+        params.require(:dev).permit(:name, :experience, :workplace, :project_ids => [])
     end
 end
