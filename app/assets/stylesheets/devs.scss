@@ -1,3 +1,21 @@
 // Place all the styles related to the devs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+
+.homepage-devs li {
+    font-size: 1.5em;
+    color: grey;
+    text-decoration: none;
+    
+}
+
+.container{
+    height: 30px;
+    font-size: 13px;
+    background-color: blueviolet;
+    border: none;
+    color: #fff;
+    padding: 1px;
+  }

@@ -8,8 +8,9 @@
 <%= f.label :workplace, "Workplace: "%>
 <%= f.text_field :workplace %><br><br>
 <%=f.label :project_id, "Project selection:"%>
+<div class="container">
 <%= f.collection_check_boxes(:project_ids, Project.all, :id, :name) %>
-
+</div>
 <%= f.submit %>
 
 

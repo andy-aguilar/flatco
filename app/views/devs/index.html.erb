@@ -1,6 +1,8 @@
-<h1>Dev list</h1>
+<h1>Devs list</h1>
 <ul>
     <% @devs.each do |dev| %>
+    <div class ="homepage-devs">
     <li><%= link_to dev.name, dev_path(dev) %></li>
+    </div>
     <% end %>
 </ul>
