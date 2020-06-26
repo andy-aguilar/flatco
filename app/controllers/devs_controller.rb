@@ -13,8 +13,24 @@ class DevsController < ApplicationController
     end
   
     def create
-         @dev = Dev.create(dev_params)
-         redirect_to dev_path(@dev)
+        @dev = Dev.create(dev_params)
+        redirect_to dev_path(@dev)
+    end
+
+    def edit
+        @dev = Dev.find(params[:id])
+    end
+
+    def update
+        @dev = Dev.find(params[:id])
+        @dev.update(dev_params)
+        redirect_to dev_path(@dev)
+    end
+
+    def destroy
+        @dev = Dev.find(params[:id])
+        @dev.destroy
+        redirect_to devs_path
     end
 
     private

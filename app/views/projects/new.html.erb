@@ -1,1 +1,11 @@
-<h1>Projects new</h1>
+<h1>New Project</h1>
+
+<%= form_for @project do |f| %>
+<%= f.label :name, "Project Name:" %>
+<%= f.text_field :name %><br>
+<%= f.label :description, "Project Description:" %><br>
+<%= f.text_area :description %><br>
+<%= f.label :dev_id, "Devs on Project:" %><br>
+<%= f.collection_check_boxes(:dev_ids, Dev.all, :id, :name) %><br>
+<%= f.submit %>
+<% end %>

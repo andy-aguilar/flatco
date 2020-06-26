@@ -9,4 +9,7 @@
 <%end%>
 </ul>
 <%end%>
-<%= link_to "List of devs", devs_path %>
+
+<%= link_to "Edit this Dev", edit_dev_path(@dev)%><br>
+<%= link_to "List of devs", devs_path %><br>
+<%= link_to "Fire this Dev", dev_path(@dev.id), method: "DELETE"%>

@@ -41,7 +41,7 @@ zara = Dev.create(name: "Zara", experience: rand(1..10), workplace: "Flat co")
 
 
 10.times do 
-    Project.create(name: Faker::App.name, description: Faker::Company.catch_phrase)
+    Project.create(name: Faker::App.unique.name, description: Faker::Company.catch_phrase)
 end
 
 
