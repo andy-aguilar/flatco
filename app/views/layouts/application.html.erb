@@ -11,6 +11,13 @@
   </head>
 
   <body>
+    <header>
+      <div class ="topnav">
+        <%= link_to "FlatCo.", homepage_path %>
+        <%= link_to "Dev list", devs_path %>
+        <%= link_to "Project list", projects_path %>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>

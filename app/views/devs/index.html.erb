@@ -1,20 +1,21 @@
-<h1>Devs list</h1>
-
-<%= form_tag devs_path, method: "GET" do %>
-    <%= radio_button_tag "company_name", "Flat co", checked=@flat_co %>
-    <%= label_tag "Works at Flat co" %>
-    <%= radio_button_tag "company_name", "Co", checked = @co %>
-    <%= label_tag "Works at Co" %>
-    <%= radio_button_tag "company_name", "all", checked = @all_dev%>
-    <%= label_tag "all" %>
-    <%= submit_tag "Submit"%>
-<% end %>
-<ul>
-    <% @devs.each do |dev| %>
-    <div class ="homepage-devs">
-    <li><%= link_to dev.name, dev_path(dev) %></li>
-    </div>
+<div class = "dev_list">
+    <h1>Devs list</h1>
+    <%= form_tag devs_path, method: "GET" do %>
+        <%= radio_button_tag "company_name", "Flat co", checked=@flat_co %>
+        <%= label_tag "Works at Flat co" %>
+        <%= radio_button_tag "company_name", "Co", checked = @co %>
+        <%= label_tag "Works at Co" %>
+        <%= radio_button_tag "company_name", "all", checked = @all_dev%>
+        <%= label_tag "all" %>
+        <%= submit_tag "Submit"%>
     <% end %>
-</ul>
+    <ul>
+        <% @devs.each do |dev| %>
+        <div class ="homepage-devs">
+        <li><%= link_to dev.name, dev_path(dev) %></li>
+        </div>
+        <% end %>
+    </ul>
 
-<h2><%= link_to "Hire a Dev", new_dev_path %></h2>
+    <h2><%= link_to "Hire a Dev", new_dev_path %></h2>
+</div>
